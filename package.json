@@ -1,0 +1,121 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": "false",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "react-scripts build",
+    "test:server": "echo \"Error: no test specified\" && exit 1",
+    "up": "db-migrate up",
+    "migrate": "db-migrate create",
+    "dev": "concurrently \"nodemon server/index.js --watch server\" \"export PORT=3031 && react-scripts start\"",
+    "test:client": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx ./src",
+    "lint:fix": "eslint --fix --ext .js,.jsx ./src",
+    "serve": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:3003",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.7",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^6.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "@atlaskit/breadcrumbs": "^11.3.4",
+    "@date-io/date-fns": "1.x",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@iconify/icons-ant-design": "^1.1.0",
+    "@iconify/icons-eva": "^1.1.0",
+    "@iconify/icons-ic": "^1.1.10",
+    "@iconify/react": "^3.0.1",
+    "@material-ui/pickers": "^3.3.10",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/lab": "^5.0.0-alpha.47",
+    "@mui/material": "^5.0.0",
+    "@mui/utils": "^5.0.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "apexcharts": "^3.28.3",
+    "async": "^3.2.1",
+    "axios": "^0.22.0",
+    "bcrypt": "^5.0.1",
+    "change-case": "^4.1.2",
+    "concurrently": "^6.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "db-migrate": "^1.0.0-beta.16",
+    "db-migrate-mysql": "^2.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-res-status": "^1.0.2",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "formik": "^2.2.9",
+    "framer-motion": "^4.1.17",
+    "history": "^5.0.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.0",
+    "nodemailer": "^6.6.5",
+    "numeral": "^2.0.6",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.3.9",
+    "react-dom": "^17.0.2",
+    "react-helmet-async": "^1.1.2",
+    "react-material-event-calendar": "^0.3.2",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^6.0.0-beta.4",
+    "react-scripts": "^4.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^6.6.5",
+    "simplebar": "^5.3.6",
+    "simplebar-react": "^2.3.6",
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.9"
+  }
+}

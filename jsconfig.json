@@ -1,0 +1,11 @@
+{
+	"resource": "/home/alfatah/Documents/projects/myprojects/uiii-lms/jsconfig.json",
+	"owner": "typescript",
+	"severity": 8,
+	"message": "File '/home/alfatah/Documents/projects/myprojects/uiii-lms/node_modules/agent-base/dist/src/index' not found.\n  The file is in the program because:\n    Root file specified for compilation",
+	"source": "ts",
+	"startLineNumber": 1,
+	"startColumn": 1,
+	"endLineNumber": 1,
+	"endColumn": 2
+}
