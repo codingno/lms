@@ -234,6 +234,7 @@ function CreateCourse(props) {
 
   const createUser = async () => {
 		
+		setLoading(true)
     try {
 			let attachmentData = attachment
 			if(activityType !== 6) {
@@ -249,6 +250,7 @@ function CreateCourse(props) {
       });
       await dispatch(getCategoryList());
       alert(`Session activity created successfully.`);
+			setLoading(false)
       // props.setCreateUser(false)
       // navigate("/dashboard/courses/${user.data.role_id == 3 || user.data.id == 4 ? 'teacher' : user.data.role}/sub_category/"+categoryCode);
 			dispatch({ type : 'refresh_start'})
@@ -261,6 +263,7 @@ function CreateCourse(props) {
   };
 
   const updateUser = async () => {
+		setLoading(true)
     try {
 			let attachmentData = attachment
 			if(activityType !== 6) {
@@ -278,6 +281,7 @@ function CreateCourse(props) {
       });
       await dispatch(getCategoryList());
       alert(`Session activity updated successfully.`);
+			setLoading(false)
       // props.setCreateUser(false)
 			// gotoTopic(course_code, topicName, courseID)
       // navigate("/dashboard/courses/sub_category/"+categoryCode);
@@ -705,6 +709,7 @@ function CreateCourse(props) {
             >
               <span style={{ width: "35%" }}></span>
               <Button
+                disabled={isLoading}
                 variant="contained"
                 // component={RouterLink}
                 // to="#"

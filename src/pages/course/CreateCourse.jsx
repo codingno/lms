@@ -187,6 +187,7 @@ function CreateCourse(props) {
 	}
 
   const createUser = async () => {
+		setLoading(true)
 		
     try {
 			const imageFile = await uploadImage()
@@ -211,6 +212,7 @@ function CreateCourse(props) {
       });
       await dispatch(getCategoryList());
       alert(`Course created successfully.`);
+      setLoading(false)
       // props.setCreateUser(false)
 			dispatch({ type : 'refresh_start'})
       navigate(`/dashboard/courses/${user.data.role_id == 3 || user.data.id == 4 ? 'teacher' : user.data.role}/${category_code}/`+sub_category);
@@ -638,6 +640,7 @@ function CreateCourse(props) {
             >
               <span style={{ width: "35%" }}></span>
               <Button
+                disabled={isLoading}
                 variant="contained"
                 // component={RouterLink}
                 // to="#"

@@ -209,10 +209,12 @@ function CreateCourse(props) {
       // props.setCreateUser(false)
       // navigate("/dashboard/courses/${user.data.role_id == 3 || user.data.id == 4 ? 'teacher' : user.data.role}/sub_category/"+categoryCode);
 			gotoTopic(course_code, courseName, courseID)
+      setLoading(false)
     } catch (error) {
       if (error.response) {
         alert(error.response.data);
       }
+      setLoading(false)
     }
   };
 
@@ -331,6 +333,7 @@ function CreateCourse(props) {
             >
               <span style={{ width: "35%" }}></span>
               <Button
+                disabled={isLoading}
                 variant="contained"
                 // component={RouterLink}
                 // to="#"
