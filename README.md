@@ -1,15 +1,15 @@
-# UIII-LMS
+# University-LMS
 
 ### Installation
 
-UIII-LMS requires [Node.js](https://nodejs.org/) v14+ to run.
+University-LMS requires [Node.js](https://nodejs.org/) v14+ to run.
 
 Copy ```.env.example``` file into ```.env``` and change database information.
 
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-cd uiii-lms
+cd lms
 yarn install
 yarn dev
 ```

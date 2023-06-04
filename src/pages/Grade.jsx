@@ -307,7 +307,7 @@ export default function Enrollment(props) {
 	})
   // return categoryList.data && ( 
   return ( 
-    <Page title="Grade | UIII LMS">
+    <Page title="Grade | University LMS">
       <Container>
 				<Modal
 					open={openModal}

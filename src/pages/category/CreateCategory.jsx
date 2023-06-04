@@ -187,7 +187,7 @@ function CreateCategory(props) {
       : mainCategories.map((item) => <MenuItem value={item.code}>{item.code}</MenuItem>);
 
   return (
-    <Page title="Create User | UIII LMS">
+    <Page title="Create User | University LMS">
       <Container>
         <Stack
           // direction="row"

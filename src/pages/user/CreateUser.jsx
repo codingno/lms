@@ -220,7 +220,7 @@ function CreateUser(props) {
 	roles.map(item => <MenuItem key={item.id + item.name} value={item.id}>{item.name}</MenuItem>)
 
 	return (
-    <Page title={`${props.edit ? "Edit" : "Create"} User | UIII LMS`}>
+    <Page title={`${props.edit ? "Edit" : "Create"} User | University LMS`}>
       <Container>
 				<Modal
 					open={showModalPassword}

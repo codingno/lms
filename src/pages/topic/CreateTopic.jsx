@@ -273,7 +273,7 @@ function CreateCourse(props) {
 	}
 
   return (
-    <Page title="Create User | UIII LMS">
+    <Page title="Create User | University LMS">
       <Container>
         <Stack
           direction="row"

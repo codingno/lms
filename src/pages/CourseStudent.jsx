@@ -58,7 +58,7 @@ export default function CourseStudent() {
       return getCourseUserList()
   }, [refresh, location])
   return (
-    <Page title="Dashboard: Products | UIII LMS">
+    <Page title="Dashboard: Products | University LMS">
       <Container>
         <Typography variant="h4" sx={{ mb: 5 }}>
           Courses

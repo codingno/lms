@@ -203,7 +203,7 @@ export default function Courses(props) {
   const isUserNotFound = filteredUsers.length === 0;
   // return categoryList.data && ( 
   return ( 
-    <Page title="Courses | UIII LMS">
+    <Page title="Courses | University LMS">
       <Container>
 				{/* <Stack sx={{ marginBottom: '3em'}}>
 					<BreadCrumb />

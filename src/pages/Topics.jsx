@@ -192,7 +192,7 @@ export default function Topics(props) {
 
   // return categoryList.data && ( 
   return ( 
-    <Page title="Sessions | UIII LMS">
+    <Page title="Sessions | University LMS">
       <Container>
 				{/* <Stack sx={{ marginBottom: '3em'}}>
 					<BreadCrumb />

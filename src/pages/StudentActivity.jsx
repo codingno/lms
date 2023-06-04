@@ -334,7 +334,7 @@ export default function Enrollment(props) {
 	let valueDescription = {}
   // return categoryList.data && ( 
   return ( 
-    <Page title="Student Activity | UIII LMS">
+    <Page title="Student Activity | University LMS">
       <Container
 				sx={{
 					mt : 2,

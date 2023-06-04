@@ -132,7 +132,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
 				</Typography>
 				<br />
 				<Typography variant="p" sx={{ color : '#fff', fontSize : 12 }}>
-					Universitas Islam International Indonesia
+					University
 				</Typography>
 			</Box>
 

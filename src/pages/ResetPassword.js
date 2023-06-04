@@ -64,7 +64,7 @@ export default function Login() {
 	}
 	
   return (
-    <RootStyle title="Login | UIII LMS">
+    <RootStyle title="Login | University LMS">
       <AuthLayout>
         <Typography sx={{ color: 'white' }}>Don’t have an account? &nbsp;</Typography>
         <Link
@@ -79,7 +79,10 @@ export default function Login() {
       </AuthLayout>
 			<div className="container-login">
 				<div className="login-white-uiii">
-					<img src="/static/white-uiii.png" alt="login-logo" />
+					<img src="/static/login-logo-white.png" alt="login-logo" 
+							width={479}
+							height={132}
+          />
 				</div>
 				<div className="login-line"></div>
 				<div className="login-form">
@@ -105,7 +108,7 @@ export default function Login() {
 				</div>
 			</div>
 			<div className="login-copyright">
-				<span>&copy;{ new Date().getFullYear()} Universitas Islam International Indonesia</span>
+				<span>&copy;{ new Date().getFullYear()} University</span>
 			</div>
 
       {/* <MHidden width="mdDown">
@@ -121,9 +124,9 @@ export default function Login() {
         <ContentStyle>
           <FormStyle>
             <Stack sx={{ mb: 5 }}>
-          		<img src="/static/white-uiii.png" alt="login-logo" />
+          		<img src="/static/login-logo-white.png" alt="login-logo" />
               <Typography variant="h3" sx={{ px: 0, mt: 0, mb: 5, color: '#003B5C' }}>
-                UIII Learning Management System
+                University Learning Management System
               </Typography>
               <Typography variant="h4" gutterBottom>
                 Sign in to ULMS

@@ -36,7 +36,7 @@ module.exports = {
 									</tr>
 									<tr>
 										<td style="text-align:center;">
-										<a href="uiii-ulms.id" title="logo" target="_blank">
+										<a href="lms.university.ac.id" title="logo" target="_blank">
 											<img width="60" src="https://disk.mediaindonesia.com/thumbs/600x400/news/2019/07/80f3537bb03b39c08a80fe8229e9bf77.jpg" title="logo" alt="logo">
 										</a>
 										</td>
@@ -77,7 +77,7 @@ module.exports = {
 									</tr>
 									<tr>
 										<td style="text-align:center;">
-											<p style="font-size:14px; color:rgba(69, 80, 86, 0.7411764705882353); line-height:18px; margin:0 0 0;">&copy; <strong>uiii-lms.id</strong></p>
+											<p style="font-size:14px; color:rgba(69, 80, 86, 0.7411764705882353); line-height:18px; margin:0 0 0;">&copy; <strong>lms.university.ac.id</strong></p>
 										</td>
 									</tr>
 									<tr>
@@ -93,9 +93,9 @@ module.exports = {
 				</html>
 				`;
     var mailOptions = {
-      from: "LMS-UIII <no-reply>",
+      from: "LMS-University <no-reply>",
       to: email,
-      subject: "reset password lms-uiii",
+      subject: "reset password lms-university",
       html,
     };
     transporter.sendMail(mailOptions, function (error, info) {
@@ -104,7 +104,7 @@ module.exports = {
   },
   sendEmailNotif: function(data, callback){
     var mailOptions = {
-      from: "LMS-UIII <no-reply>",
+      from: "LMS-University <no-reply>",
       to: data.emails,
       subject: "",
     };

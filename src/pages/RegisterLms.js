@@ -56,7 +56,7 @@ const FormStyle = styled('div')(({ theme }) => ({
 
 export default function RegisterLms() {
   return (
-    <RootStyle title="Register | UIII LMS">
+    <RootStyle title="Register | University LMS">
       <AuthLayout>
         <Typography sx={{ color: 'white' }}>Already have an account? &nbsp;</Typography>
         <Link
@@ -73,7 +73,7 @@ export default function RegisterLms() {
       {/* <MHidden width="mdDown">
         <SectionStyle>
           <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            UIII Learning Management System
+            University Learning Management System
           </Typography>
           <img alt="register" src="/static/illustrations/illustration_register.png" />
         </SectionStyle>
@@ -83,7 +83,7 @@ export default function RegisterLms() {
         <ContentStyle>
           <FormStyle>
             <Typography variant="h3" sx={{ px: 0, mt: 0, mb: 5, color: '#003B5C' }}>
-              UIII Learning Management System
+              University Learning Management System
             </Typography>
             <Box sx={{ mb: 5 }}>
               <Typography variant="h4" gutterBottom sx={{ color: '#003B5C' }}>

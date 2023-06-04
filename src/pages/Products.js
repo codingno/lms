@@ -47,7 +47,7 @@ export default function EcommerceShop() {
   };
 
   return (
-    <Page title="Dashboard: Products | UIII LMS">
+    <Page title="Dashboard: Products | University LMS">
       <Container>
         <Typography variant="h4" sx={{ mb: 5 }}>
           Products
