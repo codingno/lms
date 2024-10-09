@@ -43,7 +43,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://api:3003",
+  "proxy": "http://localhost:3003",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.15.7",
@@ -73,6 +73,7 @@
     "@mui/lab": "^5.0.0-alpha.47",
     "@mui/material": "^5.0.0",
     "@mui/utils": "^5.0.0",
+    "@mui/x-date-pickers": "5.0.0-alpha.1",
     "@testing-library/jest-dom": "^5.14.1",
     "apexcharts": "^3.28.3",
     "async": "^3.2.1",
