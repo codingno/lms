@@ -4,6 +4,7 @@ database.json
 build/
 package-lock.json
 uploads/
+mysql_data/
 
 # Logs
 logs

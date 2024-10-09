@@ -1,0 +1,41 @@
+services:
+  api:
+    build:
+      context: .
+      target: build
+    volumes:
+      - ./:/app  # Mount the whole project directory
+      - ./doc:/app/doc  # Mount the docs directory
+      - ./data:/app/data  # Mount the data directory
+      - ./uploads:/app/uploads  # Mount the data directory
+      - /app/node_modules  # Ignore node_modules on the host, use container's version
+    ports:
+      - 3003:3003  # Expose port 3000 for the API
+      - 3031:3031
+    command: npm run dev
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_NAME: ${DB_NAME}
+    depends_on:
+      - db  # MySQL should start before the API
+
+  db:
+    image: mysql:5.7  # Use MySQL 5.7 image
+    container_name: mysql57-lms-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}  # Using DB_PASS from .env as root password
+      MYSQL_DATABASE: ${DB_NAME}  # Using DB_NAME from .env
+      MYSQL_USER: admin  # Using DB_USER from .env
+      MYSQL_PASSWORD: Asrama1  # Using DB_PASS from .env
+
+    ports:
+      - 3306:3306  # Expose MySQL port
+    volumes:
+      - ./mysql_data:/var/lib/mysql  # Mount a directory on the host for data persistence
+
+volumes:
+  # Clear and more readable mount paths
+  mysql_data:  # This will store MySQL data persistently under ./mysql_data directory on the host

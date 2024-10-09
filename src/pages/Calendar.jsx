@@ -1,5 +1,5 @@
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import isWeekend from 'date-fns/isWeekend';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';

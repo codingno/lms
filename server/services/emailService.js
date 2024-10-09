@@ -1,12 +1,14 @@
 var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSEMAIL,
   },
 });
-var BaseUrlClient = process.env.BASE_URL_CLIENT || "localhost:3031";
+var BaseUrlClient = process.env.EMAIL_TOKEN_URL || "localhost:3003";
 
 module.exports = {
   sendEmailForgotPass: function (email, resetPasswordToken, callback) {
@@ -93,7 +95,7 @@ module.exports = {
 				</html>
 				`;
     var mailOptions = {
-      from: "LMS-University <no-reply>",
+      from: `LMS-University <${process.env.EMAIL_FROM}>`,
       to: email,
       subject: "reset password lms-university",
       html,
@@ -102,15 +104,14 @@ module.exports = {
       callback(error, info);
     });
   },
-  sendEmailNotif: function(data, callback){
+  sendEmailNotif: function (data, callback) {
     var mailOptions = {
-      from: "LMS-University <no-reply>",
+      from: `LMS-University <${process.env.EMAIL_FROM}>`,
       to: data.emails,
       subject: "",
     };
     transporter.sendMail(mailOptions, function (error, info) {
       callback(error, info);
     });
-
-  }
+  },
 };
