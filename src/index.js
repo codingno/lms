@@ -8,7 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux'
 import createStore from './store';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import LocalizationProvider from '@mui/lab/LocalizationProvider'
 import idLocale from 'date-fns/locale/id'
 
 //

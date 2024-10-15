@@ -21,7 +21,19 @@ module.exports = {
         try {
 						const condition = category_code ? ` WHERE ct.code = :category_code` : ``
             
-            const queryString = `SELECT c.*, ct.code as category_code, cc.createdBy, group_concat(e.user_id) user_enrollment FROM courses c LEFT JOIN course_categories cc ON cc.course = c.id LEFT JOIN categories ct ON ct.id = cc.category LEFT JOIN enrollment e ON e.course_id = c.id  ${condition} GROUP BY c.id ORDER BY c.position ASC`
+            const queryString = `
+              SELECT 
+                c.*, 
+                ct.code as category_code, 
+                cc.createdBy, 
+                group_concat(e.user_id) user_enrollment 
+              FROM 
+                courses c 
+              LEFT JOIN course_categories cc ON cc.course = c.id 
+              LEFT JOIN categories ct ON ct.id = cc.category 
+              LEFT JOIN enrollment e ON e.course_id = c.id  
+              ${condition} 
+              GROUP BY c.id, ct.code, cc.createdBy ORDER BY c.position ASC`
             const courses = await sequelize.query(queryString, {type: QueryTypes.SELECT, replacements: {category_code}})
             callback(null, courses)
         }

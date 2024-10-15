@@ -50,13 +50,6 @@ export default function UserMoreMenu({ code, category_code, category_name }) {
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <MenuItem sx={{ color: 'text.secondary' }} onClick={() => deleteCategory(code)} disabled={disableDeleteButton}>
-          <ListItemIcon>
-            <Icon icon={trash2Outline} width={24} height={24} />
-          </ListItemIcon>
-          <ListItemText primary="Delete" primaryTypographyProps={{ variant: 'body2' }} />
-        </MenuItem>
-
         <MenuItem sx={{ color: 'text.secondary' }} onClick={() => {
 						// navigate('/dashboard/courses/admin/category/edit', { state:{ code , category_code }}) 
 						if(category_code)
@@ -69,6 +62,14 @@ export default function UserMoreMenu({ code, category_code, category_name }) {
           </ListItemIcon>
           <ListItemText primary="Edit" primaryTypographyProps={{ variant: 'body2' }} />
         </MenuItem>
+
+        <MenuItem sx={{ color: 'text.secondary' }} onClick={() => deleteCategory(code)} disabled={disableDeleteButton}>
+          <ListItemIcon>
+            <Icon icon={trash2Outline} width={24} height={24} />
+          </ListItemIcon>
+          <ListItemText primary="Delete" primaryTypographyProps={{ variant: 'body2' }} />
+        </MenuItem>
+
       </Menu>
     </>
   );

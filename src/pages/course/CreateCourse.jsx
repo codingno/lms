@@ -187,6 +187,7 @@ function CreateCourse(props) {
 	}
 
   const createUser = async () => {
+    if (!window.confirm("Are you sure to create this course?")) return;
 		setLoading(true)
 		
     try {
@@ -224,6 +225,7 @@ function CreateCourse(props) {
   };
 
   const updateUser = async () => {
+    if (!window.confirm("Are you sure to update this course?")) return;
     try {
 			const currentImage = image_url.split(window.location.origin + "/")[1]
 			let imageFile = {}

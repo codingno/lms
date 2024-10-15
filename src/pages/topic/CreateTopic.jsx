@@ -192,6 +192,7 @@ function CreateCourse(props) {
 	}
 
   const createUser = async () => {
+    if (!window.confirm("Are you sure to create this session?")) return;
 		setLoading(true)
 		
     try {
@@ -219,6 +220,7 @@ function CreateCourse(props) {
   };
 
   const updateUser = async () => {
+    if (!window.confirm("Are you sure to update this session?")) return;
 		setLoading(true)
     try {
       await axios.patch("/api/topic/update", {

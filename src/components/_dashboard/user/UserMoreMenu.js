@@ -20,6 +20,7 @@ export default function UserMoreMenu(props) {
   const [isOpen, setIsOpen] = useState(false);
 
 	async function deleteUser(id) {
+    if (!window.confirm("Are you sure to delete this user?")) return
 		try {
 			const { data } = await axios.delete('/api/user/delete/'+id)
 			dispatch({type : 'refresh_start'})
@@ -44,6 +45,13 @@ export default function UserMoreMenu(props) {
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
+        <MenuItem sx={{ color: 'text.secondary' }} onClick={() => navigate(`/dashboard/user/${props.id}/edit`, { state:{ username: props.username, id : props.id }}) }>
+          <ListItemIcon>
+            <Icon icon={editFill} width={24} height={24} />
+          </ListItemIcon>
+          <ListItemText primary="Edit" primaryTypographyProps={{ variant: 'body2' }} />
+        </MenuItem>
+
         <MenuItem sx={{ color: 'text.secondary' }}
 					onClick={() => deleteUser(props.id)}
 				>
@@ -53,12 +61,6 @@ export default function UserMoreMenu(props) {
           <ListItemText primary="Delete" primaryTypographyProps={{ variant: 'body2' }} />
         </MenuItem>
 
-        <MenuItem sx={{ color: 'text.secondary' }} onClick={() => navigate(`/dashboard/user/${props.id}/edit`, { state:{ username: props.username, id : props.id }}) }>
-          <ListItemIcon>
-            <Icon icon={editFill} width={24} height={24} />
-          </ListItemIcon>
-          <ListItemText primary="Edit" primaryTypographyProps={{ variant: 'body2' }} />
-        </MenuItem>
       </Menu>
     </>
   );

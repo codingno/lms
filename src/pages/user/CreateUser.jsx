@@ -158,6 +158,7 @@ function CreateUser(props) {
 	}
 
 	const createUser = async () => {
+    if (!window.confirm("Are you sure to create this user?")) return;
 		try {
 			const imageFile = await uploadImage()
 			await axios.put('/api/user/create', {firstname, lastname, username, email, role_id, code,
@@ -175,6 +176,7 @@ function CreateUser(props) {
 	}
 
 	const updateUser = async () => {
+    if (!window.confirm("Are you sure to update this user?")) return;
 		try {
 			if(password.length > 0 && currentPassword.length == 0)
 				if(window.confirm(`Are you sure to change the password?`)) {

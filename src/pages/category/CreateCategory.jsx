@@ -140,6 +140,7 @@ function CreateCategory(props) {
 
   const createUser = async () => {
 		
+    if (!window.confirm("Are you sure to create this category?")) return;
     try {
       await axios.post("/api/category/create", {
 				name,
@@ -160,6 +161,7 @@ function CreateCategory(props) {
   };
 
   const updateUser = async () => {
+    if (!window.confirm("Are you sure to update this category?")) return;
     try {
       await axios.patch("/api/category/update", {
         id: categoryID,

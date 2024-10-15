@@ -52,15 +52,6 @@ export default function UserMoreMenu(props) {
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
         <MenuItem sx={{ color: 'text.secondary' }} 
-					onClick={() => deleteCategory(props.code)} disabled={disableDeleteButton}
-					>
-          <ListItemIcon>
-            <Icon icon={trash2Outline} width={24} height={24} />
-          </ListItemIcon>
-          <ListItemText primary="Delete" primaryTypographyProps={{ variant: 'body2' }} />
-        </MenuItem>
-
-        <MenuItem sx={{ color: 'text.secondary' }} 
 				onClick={() => 
 					// navigate('/dashboard/courses/admin/edit', { state:{ code: props.code }}) 
 							navigate(`/dashboard/courses/admin/${category_code}/${sub_category}/${props.code}/edit`, {state:{category_code, sub_category, code : props.code}})
@@ -70,6 +61,7 @@ export default function UserMoreMenu(props) {
           </ListItemIcon>
           <ListItemText primary="Edit" primaryTypographyProps={{ variant: 'body2' }} />
         </MenuItem>
+
         <MenuItem sx={{ color: 'text.secondary' }} onClick={() => props.gotoTopic() }>
           <ListItemIcon>
             <Icon icon={editFill} width={24} height={24} />
@@ -91,6 +83,16 @@ export default function UserMoreMenu(props) {
             <ListItemText primary="Manage Grade" primaryTypographyProps={{ variant: 'body2' }} />
           </MenuItem>
         )}
+
+        <MenuItem sx={{ color: 'text.secondary' }} 
+					onClick={() => deleteCategory(props.code)} disabled={disableDeleteButton}
+					>
+          <ListItemIcon>
+            <Icon icon={trash2Outline} width={24} height={24} />
+          </ListItemIcon>
+          <ListItemText primary="Delete" primaryTypographyProps={{ variant: 'body2' }} />
+        </MenuItem>
+
       </Menu>
     </>
   );
