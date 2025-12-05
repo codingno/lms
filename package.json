@@ -114,7 +114,7 @@
     "react-scripts": "^4.0.3",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
-    "sequelize": "^6.6.5",
+    "sequelize": "^6.29.0",
     "simplebar": "^5.3.6",
     "simplebar-react": "^2.3.6",
     "web-vitals": "^2.1.0",
